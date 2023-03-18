@@ -33,19 +33,17 @@ public class Main {
         int[] sallaryArr = generateRandomArray();
         System.out.println(Arrays.toString(sallaryArr));
         int maxSallary = 0;
-        int minSallary = 0;
+        int minSallary = sallaryArr[0];
         for (int sallary: sallaryArr) {
             if (sallary > maxSallary) {
                 maxSallary = sallary;
                 }
-            for (int sallary2: sallaryArr) {
-            if (sallary2 < minSallary) {
-                minSallary = sallary2;
+            if (sallary < minSallary) {
+                minSallary = sallary;
             }
         }
-        }
         System.out.println("Минимальная сумма трат за день составила " + minSallary + " рублей." +
-                " Максимальная сумма трат за день составила " + maxSallary + " рублей.");
+        " Максимальная сумма трат за день составила " + maxSallary + " рублей.");
     }
 
     public static void task3 () {
